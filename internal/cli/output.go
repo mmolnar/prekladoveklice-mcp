@@ -6,7 +6,7 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/model"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/model"
 )
 
 func newTable(w io.Writer) *tabwriter.Writer {

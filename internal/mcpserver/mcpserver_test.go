@@ -7,8 +7,8 @@ import (
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/model"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/store"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/model"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/store"
 )
 
 // fakeStore answers just enough for the tool handlers.

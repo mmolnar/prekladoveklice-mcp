@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/config"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/source"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/store"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/store/sqlite"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/version"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/config"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/source"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/store"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/store/sqlite"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/version"
 )
 
 // Open returns the configured store.

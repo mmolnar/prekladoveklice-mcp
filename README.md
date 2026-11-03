@@ -20,11 +20,11 @@ It is a single static binary with no runtime dependencies.
 ## Install
 
 Download a binary for your platform from the
-[releases page](https://github.com/your-github-user/prekladoveklice-mcp/releases),
+[releases page](https://github.com/mmolnar/prekladoveklice-mcp/releases),
 or build from source (Go 1.26+):
 
 ```sh
-go install github.com/your-github-user/prekladoveklice-mcp/cmd/pk@latest
+go install github.com/mmolnar/prekladoveklice-mcp/cmd/pk@latest
 ```
 
 ## Quick start
@@ -181,7 +181,7 @@ umožní v nich rychle hledat z příkazové řádky nebo z Clauda (přes MCP). 
 zůstávají dílem autorů webu; nástroj je jen stahuje.
 
 1. Stáhněte `pk` pro svůj systém ze
-   [stránky s vydáními](https://github.com/your-github-user/prekladoveklice-mcp/releases)
+   [stránky s vydáními](https://github.com/mmolnar/prekladoveklice-mcp/releases)
    a dejte ho někam do `PATH`.
 2. Stáhněte klíče (stejným příkazem je později aktualizujete — stahuje se jen
    to, co se změnilo, a stará data se nezahodí, dokud nová neprojdou kontrolou):

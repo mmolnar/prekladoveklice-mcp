@@ -16,7 +16,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/model"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/model"
 )
 
 const AppDataKey = "appData"

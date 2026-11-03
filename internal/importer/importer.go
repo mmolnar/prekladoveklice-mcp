@@ -15,9 +15,9 @@ import (
 
 	"github.com/gofrs/flock"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/model"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/source"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/store"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/model"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/source"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/store"
 )
 
 // Options control an import run.

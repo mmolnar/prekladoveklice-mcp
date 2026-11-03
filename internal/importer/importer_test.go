@@ -11,11 +11,11 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/importer"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/model"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/source"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/store"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/store/sqlite"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/importer"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/model"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/source"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/store"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/store/sqlite"
 )
 
 // upstream is a fake prekladoveklice site whose files tests can change.

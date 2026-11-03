@@ -50,5 +50,3 @@ pk status
   the next import rebuilds from source (no migrations).
 - MCP tool output types must not be recursive (the SDK derives JSON schemas).
 - Planned: PostgreSQL backend (staging schema + rename swap), GoReleaser.
-- Module path `github.com/your-github-user/...` is a placeholder until the
-  GitHub repo exists.

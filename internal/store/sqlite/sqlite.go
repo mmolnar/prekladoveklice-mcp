@@ -15,9 +15,9 @@ import (
 
 	_ "modernc.org/sqlite"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/model"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/store"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/textnorm"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/model"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/store"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/textnorm"
 )
 
 const maxLimit = 500

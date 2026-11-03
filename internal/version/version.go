@@ -6,7 +6,7 @@ import "runtime"
 var (
 	Version = "dev"
 	Commit  = ""
-	Repo    = "https://github.com/your-github-user/prekladoveklice-mcp"
+	Repo    = "https://github.com/mmolnar/prekladoveklice-mcp"
 )
 
 // UserAgent identifies pk to the source website.

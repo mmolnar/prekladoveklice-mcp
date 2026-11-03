@@ -18,13 +18,13 @@ import (
 	"github.com/spf13/cobra"
 	"go.yaml.in/yaml/v3"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/backend"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/config"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/importer"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/mcpserver"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/model"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/store"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/version"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/backend"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/config"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/importer"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/mcpserver"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/model"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/store"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/version"
 )
 
 type app struct {

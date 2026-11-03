@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/model"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/textnorm"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/model"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/textnorm"
 )
 
 var (

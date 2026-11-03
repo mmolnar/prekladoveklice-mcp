@@ -4,7 +4,7 @@ package main
 import (
 	"os"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/cli"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/cli"
 )
 
 func main() { os.Exit(cli.Execute()) }

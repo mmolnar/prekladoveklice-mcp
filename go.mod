@@ -1,4 +1,4 @@
-module github.com/your-github-user/prekladoveklice-mcp
+module github.com/mmolnar/prekladoveklice-mcp
 
 go 1.26.0
 

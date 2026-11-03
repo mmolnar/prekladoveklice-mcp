@@ -11,9 +11,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/your-github-user/prekladoveklice-mcp/internal/model"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/store"
-	"github.com/your-github-user/prekladoveklice-mcp/internal/textnorm"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/model"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/store"
+	"github.com/mmolnar/prekladoveklice-mcp/internal/textnorm"
 )
 
 // importer builds path.new from a copy of the live database (or from
