@@ -1,0 +1,57 @@
+# GoReleaser config: `git tag vX.Y.Z && git push origin vX.Y.Z` triggers
+# .github/workflows/release.yml, which builds and publishes a GitHub release.
+# Local dry run: goreleaser release --snapshot --clean
+version: 2
+
+project_name: pk
+
+before:
+  hooks:
+    - go mod tidy
+    - go test ./...
+
+builds:
+  - id: pk
+    main: ./cmd/pk
+    binary: pk
+    env:
+      - CGO_ENABLED=0
+    goos: [linux, darwin, windows]
+    goarch: [amd64, arm64]
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w
+      - -X github.com/mmolnar/prekladoveklice-mcp/internal/version.Version={{ .Version }}
+      - -X github.com/mmolnar/prekladoveklice-mcp/internal/version.Commit={{ .ShortCommit }}
+    mod_timestamp: "{{ .CommitTimestamp }}"
+
+archives:
+  - id: pk
+    formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    name_template: "pk_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    files:
+      - README.md
+      - LICENSE
+
+checksum:
+  name_template: checksums.txt
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^ci:"
+
+release:
+  github:
+    owner: mmolnar
+    name: prekladoveklice-mcp
+  footer: |
+    The translation keys themselves are not included; run `pk import` to
+    download them from https://prekladoveklice.d20.cz/.

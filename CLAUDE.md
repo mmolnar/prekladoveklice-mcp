@@ -49,4 +49,8 @@ pk status
 - Schema changes: bump `schemaVersion` in `internal/store/sqlite/schema.go`;
   the next import rebuilds from source (no migrations).
 - MCP tool output types must not be recursive (the SDK derives JSON schemas).
-- Planned: PostgreSQL backend (staging schema + rename swap), GoReleaser.
+- Releases: push a `vX.Y.Z` tag; `.github/workflows/release.yml` runs
+  GoReleaser (`.goreleaser.yaml`), which injects `internal/version` via ldflags.
+- Windows cannot rename over an open file: the SQLite swap closes the store's
+  own handle first; keep that in mind when touching `Commit`.
+- Planned: PostgreSQL backend (staging schema + rename swap).

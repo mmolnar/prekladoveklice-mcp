@@ -19,13 +19,21 @@ It is a single static binary with no runtime dependencies.
 
 ## Install
 
-Download a binary for your platform from the
-[releases page](https://github.com/mmolnar/prekladoveklice-mcp/releases),
-or build from source (Go 1.26+):
+Download the archive for your platform (macOS, Linux, Windows; amd64 or
+arm64) from the [releases page](https://github.com/mmolnar/prekladoveklice-mcp/releases),
+unpack it and put `pk` (`pk.exe`) somewhere on your `PATH`. Verify downloads
+against `checksums.txt`.
+
+On macOS the binary is not notarized; if Gatekeeper blocks it, run
+`xattr -d com.apple.quarantine ./pk` once.
+
+Or build from source (Go 1.26+):
 
 ```sh
 go install github.com/mmolnar/prekladoveklice-mcp/cmd/pk@latest
 ```
+
+`pk version` shows what you have.
 
 ## Quick start
 
@@ -166,6 +174,18 @@ Layout: `cmd/pk` (entry point), `internal/source` (download, sha/etag,
 snapshots), `internal/importer` (diff, verify, swap — backend independent),
 `internal/store` (storage interface) and `internal/store/sqlite`,
 `internal/mcpserver`, `internal/cli`.
+
+CI (`.github/workflows/ci.yml`) runs vet and tests on Linux, macOS and Windows
+and a GoReleaser snapshot build. To release, tag and push:
+
+```sh
+git tag v0.1.0 && git push origin v0.1.0
+```
+
+`.github/workflows/release.yml` then builds the binaries with
+[GoReleaser](https://goreleaser.com) (`.goreleaser.yaml`) and publishes a
+GitHub release with archives and checksums. Local dry run:
+`goreleaser release --snapshot --clean`.
 
 ## License
 

@@ -275,8 +275,17 @@ func (i *importer) Commit(ctx context.Context) error {
 	} else if !errors.Is(err, fs.ErrNotExist) {
 		return err
 	}
+	// Windows cannot rename over a file that is open, so release our own read
+	// handle; holding the lock keeps readers from reopening the old file
+	// meanwhile. They reopen the new one on their next call.
+	i.s.mu.Lock()
+	defer i.s.mu.Unlock()
+	if i.s.db != nil {
+		i.s.db.Close()
+		i.s.db = nil
+	}
 	if err := os.Rename(i.newPath, live); err != nil {
-		return fmt.Errorf("activate new database: %w", err)
+		return fmt.Errorf("activate new database (is another pk process using it?): %w", err)
 	}
 	return nil
 }
