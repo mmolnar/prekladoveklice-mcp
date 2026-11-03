@@ -1,0 +1,7 @@
+/bin/
+/dist/
+/data/
+*.db
+*.db.new
+*.db.bak
+pk.yaml
